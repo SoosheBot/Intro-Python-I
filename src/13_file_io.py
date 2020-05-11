@@ -14,7 +14,12 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # YOUR CODE HERE
 # Code for printing to a file 
 with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/foo.txt', 'r') as file:
-    print(file.read())
+    print(file.read()) #reads the entire file
+    # print(file.readline()) #reads one line of the text file
+    '''
+    for line in file:
+        print(line, end='') #loops through the entire file -- handy if you change stuff!
+    '''
     file.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
