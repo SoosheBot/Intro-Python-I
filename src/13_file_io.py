@@ -23,10 +23,10 @@ with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/foo.txt', 'r
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/foo.txt', 'w') as file:
+with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/bar.txt', 'w') as file:
     print(file.write('We demand...a SHRUBBERY'))
     file.close()
 
-with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/foo.txt', 'r') as file:
+with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/bar.txt', 'r') as file:
     print(file.read())
     file.close()
