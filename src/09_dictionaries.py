@@ -55,4 +55,5 @@ for list in waypoints:
     for k,v in list.items():
         print(k,v)
 
+#The way Tim did it
 # [print(waypoint[key]) for waypoint in waypoints for key in waypoint]
