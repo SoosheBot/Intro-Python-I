@@ -31,10 +31,15 @@ import sys
 import calendar
 from datetime import datetime
 
+#capture command line inputs in a variable
+#print the calendar
+#handle different numbers of command line arguments
+
 #set the current date w/datetime.now(), and the month, year
 date = datetime.now()
 month = date.month
 year = date.year
+#can also write month,year = date.month, date.year
 
 #set month to new_month, make that global so it doesn't just hang out locally
 def change_month(new_month):
@@ -55,3 +60,22 @@ elif(len(sys.argv) == 3):
 
 
 print(calendar.month(year, month))
+
+#How Tim did it
+# today = datetime.today()
+# month, year = today.month, today.year
+# cal = calendar.TextCalendar(firstweekday=6)
+
+# # print(sys.argv)
+# if len(sys.argv) == 1:
+#   calendar.prmonth(today.year, today.month)
+
+# elif len(sys.argv) == 2:
+#   calendar.prmonth(today.year, int(sys.argv[1]))
+
+# elif len(sys.argv) == 3:
+#   calendar.prmonth(int(sys.argv[2]), int(sys.argv[1]))
+
+# else:
+#   print("usage: filename month year")
+#   sys.exit(1)
