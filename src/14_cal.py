@@ -30,3 +30,52 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+#capture command line inputs in a variable
+#print the calendar
+#handle different numbers of command line arguments
+
+#set the current date w/datetime.now(), and the month, year
+date = datetime.now()
+month = date.month
+year = date.year
+#can also write month,year = date.month, date.year
+
+#set month to new_month, make that global so it doesn't just hang out locally
+def change_month(new_month):
+    global month
+    month = new_month
+
+#set year to new year, set it to global
+def change_year(new_year):
+    global year
+    year = new_year
+
+#if/else to change month and year (lots of stackoverflow here--need to work through this logic more thoroughly)
+if (len(sys.argv) == 2):
+    change_month(int(sys.argv[1]))
+elif(len(sys.argv) == 3):
+    change_month(int(sys.argv[1]))
+    change_year(int(sys.argv[2]))
+
+
+print(calendar.month(year, month))
+
+#How Tim did it
+# today = datetime.today()
+# month, year = today.month, today.year
+# cal = calendar.TextCalendar(firstweekday=6)
+
+# # print(sys.argv)
+# if len(sys.argv) == 1:
+#   calendar.prmonth(today.year, today.month)
+
+# elif len(sys.argv) == 2:
+#   calendar.prmonth(today.year, int(sys.argv[1]))
+
+# elif len(sys.argv) == 3:
+#   calendar.prmonth(int(sys.argv[2]), int(sys.argv[1]))
+
+# else:
+#   print("usage: filename month year")
+#   sys.exit(1)

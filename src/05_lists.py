@@ -8,22 +8,26 @@ y = [8, 9, 10]
 
 # Change x so that it is [1, 2, 3, 4]
 # YOUR CODE HERE
-print(x)
+(x.append(4))
+print("Change: ", x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
-print(x)
+print("Add y list to x list: ", x + y)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
 # YOUR CODE HERE
-print(x)
+print("Add items from 1st-3rd index in y list to x list: ", x + y[1:3])
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
 # YOUR CODE HERE
-print(x)
+y.insert(2, 99)
+print("99: ", x + y[1:4])
 
 # Print the length of list x
 # YOUR CODE HERE
+print("Length: ", len(x))
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
+print("Times 1000: ", [num * 1000 for num in x])

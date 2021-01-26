@@ -9,7 +9,18 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
+#MY NOTES -- r, w --> read, write. .close() closes the file, 'with open() as __' opens the file
+
 # YOUR CODE HERE
+# Code for printing to a file 
+with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/foo.txt', 'r') as file:
+    print(file.read()) #reads the entire file
+    # print(file.readline()) #reads one line of the text file
+    '''
+    for line in file:
+        print(line, end='') #loops through the entire file -- handy if you change stuff!
+    '''
+    file.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -17,3 +28,10 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/bar.txt', 'w') as file:
+    print(file.write('We demand...a SHRUBBERY'))
+    file.close()
+
+with open('/Users/Mahadevi/Documents/CS7/python1/Intro-Python-I/src/bar.txt', 'r') as file:
+    print(file.read())
+    file.close()
